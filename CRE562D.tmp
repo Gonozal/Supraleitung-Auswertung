@@ -1,0 +1,115 @@
+% Klassifiziert den Dokumenten-Typ
+% Doku: http://exp1.fkp.physik.tu-darmstadt.de/tuddesign/
+% Farben: http://www.tu-darmstadt.de/media/medien_stabsstelle_km/services/medien_cd/das_bild_der_tu_darmstadt.pdf
+%  bigchapter: Chapter haben doppelte Schriftgröße
+%  linedtoc: Linien im Inhaltsverzeichnis wie bei Überschriften
+%  colorbacktitle: Der Dokumenten-Titel wird mir der Accentfarbe hinterlegt
+\documentclass[bigchapter,colorback,accentcolor=tud4b,linedtoc,11pt]{tudreport}
+
+% Input Dokument hat das Encoding UTF-8
+\usepackage[utf8]{inputenc}
+% Wichtiges Paket für Links und verlinktes Inhaltsverzeichnis
+\usepackage[ngerman]{hyperref}
+% Paket für Fußnoten
+\usepackage[stable]{footmisc}
+% Paket für Bibliotheks-Verzeichnis, square: Verwende eckige statt runde klammern
+\usepackage[square]{natbib}
+% Verwende deutsche Bezeichner für Inhaltsverzeichnis, ... (ngerman = New German: neue Rechtschreibung)
+\usepackage{ngerman}
+% Modul für chemische Formeln
+\usepackage{chemformula}
+% Deutsche Zahlen (entfernt z.B. das Leerzeichen nach einem Dezimal-Komma)
+\usepackage{ziffer} 
+
+% PDF-Optionen
+\hypersetup{
+  pdftitle={TU Darmstadt - Physikalisches Praktikum für Fortgeschrittene},
+  pdfauthor={Manuel Kress und PARTERNAME},
+  pdfsubject={Versuch 3.16-B},
+  pdfview=FitH,
+}
+
+%BEGINN TITELSEITE
+
+\title{Supraleitung}
+
+\subtitle{Manuel Kress  \\Sören Link}
+
+\subsubtitle{Betreuer: A. Privalov \hfill Versuchsdatum: 3. Februar 2014}
+
+\author{Manuel Kress, Sören Link}
+
+\settitlepicture{img/title.jpg}
+
+\institution{Physikalisches Praktikum \\für Fortgeschrittene \\ Versuch 3.16-B}
+
+\date{\today}
+
+%ENDE TITELSEITE
+
+%ANFANG DOKUMENT
+\begin{document}
+
+%Titelseite einfügen
+\maketitle
+
+%Inhaltsverzeichnis einfügen
+\tableofcontents
+
+%ANFANG INHALT
+
+\chapter{Einleitung}
+In diesem Versuch werden Festkörper bei tiefen Temperaturen untersucht. Speziell wird dabei der Effekt der Supraleitung untersucht und behandelt. Dazu werden unter anderem Sprungtemperatur und die Temperaturabhängigkeit des Widerstandes dieser Körper analysiert. 
+
+\chapter{Grundlagen}
+\section{Supraleitung}
+Viele Metalle und auch andere Festkörper zeigen unterhalb einer bestimmten Temperatur den Effekt, dass ihr elektrischer Widerstand auf Null fällt. Diesen Effekt nennt man \textbf{Supraleitung}. Der Widerstand springt dann beim Unterscheiten der sogenannten \textbf{Sprungtemperatur} entgegen der klassischen Erwartung plötzlich auf unmessbare Werte. In diesem Zustand können supraleitende Medien dauerhaft Ströme über mehrere Jahre ohne Verlust aufrecht erhalten.
+
+\subsection{Temperaturabhängigkeit des Widerstandes}
+Normalerweise ist es so, dass der spezifische elektrische Widerstand eines Materials oberhalb seiner Sprungtemperatur stark von dessen Temperatur abhängt. Je nach Art und Aufbau des Materials ist diese Abhängigkeit stark unterschiedlich und kann sich z.B. bei Phasensprüngen sogar sprunghaft verändern. Bei Leitern steigt im allgemeinen der spezifische Widerstand \(\rho = \frac{RA}{L}\) mit der Temperatur an und kann in einem begrenzten Temperaturbereich folgendermaßen annähern linear  beschrieben werden:
+
+\[\rho(T) = \rho(T_0) \cdot (1 + \alpha \cdot (T-T_0))\]
+
+\(\rho(T_0)\) ist dabei der spezifische Widerstand des Materials bei der Temperatur \(T_0\) und \(\alpha\) der materialabhängige Temperaturkoeffizient.
+
+Bei Halbleitern ist der Zusammenhang zwischen Widerstand und Temperatur abhängig von der Dotierung. Er kann davon abhängig also bei steigender Temperatur stark fallen oder auch leicht steigen.
+
+Alle supraleitenden Materialien haben gemeinsam, dass deren elektrischer Widerstand beim unterschreiten der Sprungtemperatur deren elektrischer Widerstand auf Null sinkt und beim überschreiten wieder auf den normalen Wert springt.
+
+\subsection{Eigenschaften von Supraleitern}
+Neben der Eigenschaft, dass Supraleiter (bei unterschreiten der Sprungtemperatur) eine perfekte elektrische Leitfähigkeit besitzen, zeigen sie außerdem das Phänomen, ein äußeres Magnetfeld \(H < H_C\) aus ihrem inneren zu verdrängen (Meißner-Ochsenfeld-Effekt, nur bei Supraleitern I. Art). \(H_C\) ist dabei eine kritische magnetische Feldstärke, ab der die Supraleitung zusammenbricht.
+
+\subsection{Arten von Supraleitern}
+Supraleiter werden je nach deren verhalten im äußeren Magnetfeld in zwei Gruppen kategorisiert.
+
+\section{Kühlung}
+Die Sprungtemperaturen von allen supraleitenden Materialien liegen sehr weit unter Zimmertemperatur und meist nahe am absoluten Nullpunkt. So hat Quecksilber eine Sprungtemperatur von \(T_C = 4,153 \ \mathrm{K}\) und die des keramischen Hochtemperatursupraleiters \ch{YBa2Cu3O7} liegt bei \(T_C = 93 \ \mathrm{K}\).
+
+Um im Experiment solche Temperaturen zu erreichen, verwendet man spezielle Kühlvorrichtungen. In diesem Versuch wird dazu ein Verdampferkryostat verwendet. Ein Kryostat ist prinzipiell ein Kühlgerät, mit welchem sehr tiefe Temperaturen erreicht und gehalten werden können. Im Verdampferkryostat wird dazu flüssiges Gas verdampft. Im Versuch wird \ch{^4He} verwendet, dessen Siedetemperatur bei \(T = 4,15 \ \mathrm{K}\) liegt, weshalb damit Materialen bis zu dieser Temperatur abgekühlt werden können.
+
+\section{Messverfahren}
+
+\chapter{Durchführung}
+\section{Übergangstemperatur von \ch{YBa2Cu3O7}}
+Bei der ersten Messung soll die Übergangstemperatur von \ch{YBa2Cu3O7} ermittelt werden. Zur Ermittlung dieser, wird bei diesem Teil die MIB-Messung verwendet. Die Probe befindet sich hierbei innerhalb der Referenzspule der MIB, welche sich wiederum im gekühlten Krysotaten befindet. Wir messen also indirekt die Magnetisierung der Probe, indem wir die Spannung der MIB gegenüber der Temperatur aufnehmen. Die Kühlung erfolgt in diesem Bereich durch Helium-Gas, die Temperaturmessung erfolgt mit einem PT-100-Thermoelement bei einem Messstrom von \(I_PT = 10 \ \mathrm{mA}\). Zu erwarten ist ein Anstieg (bzw., da wir die negative Spannung gemessen haben, ein Abfall) der Spannung beim erreichen der Sprungtemperatur. Folgende Mess
+
+\chapter{Auswertung}
+
+\chapter{Fazit}
+
+%ENDE INHALT
+
+\cleardoublepage
+% Eintrag fürs Inhaltsverzeichnis
+\addcontentsline{toc}{chapter}{Literaturverzeichnis}
+% Literaturverzeichnis einfügen
+\bibliography{}
+\bibliographystyle{natdin}
+
+\cleardoublepage
+% Eintrag fürs Inhaltsverzeichnis
+% Abbildungsverzeichnis einfügen
+\addcontentsline{toc}{chapter}{Abbildungsverzeichnis}
+\listoffigures
+
+\end{document}
