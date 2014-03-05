@@ -13,7 +13,7 @@
 % Paket für Fußnoten
 \usepackage[stable]{footmisc}
 % Paket für Bibliotheks-Verzeichnis, square: Verwende eckige statt runde klammern
-\usepackage[square]{natbib}
+% \usepackage[square]{natbib}
 % Paket zum Plotten von Datensätzen
 \usepackage{pgfplots}
 % Verwende deutsche Bezeichner für Inhaltsverzeichnis, ... (ngerman = New German: neue Rechtschreibung)
@@ -536,10 +536,13 @@ Leider hat sich aber allem Anschein nach bei dem Experimentieren mit Niob ein Fe
 
 \cleardoublepage{}
 % Eintrag fürs Inhaltsverzeichnis
-\addcontentsline{toc}{chapter}{Literaturverzeichnis}
-% Literaturverzeichnis einfügen
-\bibliography{}
-\bibliographystyle{natdin}
+
+\newpage
+\begin{thebibliography}{100}
+  \bibitem{finnemore} D. K. Finnemore, T. F. Stromberg, and C. A. Swen- son, Superconducting properties of high-purity nio- bium, Phys. Rev. 149 231 (1966).
+  \bititem{mappe} Literaturmappe zum Versuch aus der physikalischen Bibliothek
+\end{thebibliography}
+
 
 \cleardoublepage{}
 % Eintrag fürs Inhaltsverzeichnis
