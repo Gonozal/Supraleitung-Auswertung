@@ -352,6 +352,40 @@ Wie zu sehen ist, ist der Fehler der Plateaugeraden vernachlässigbar gegenüber
 \end{figure}
 \end{center}
 
+\begin{center}
+\begin{figure}[h]
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=Temperatur in Kelvin,
+    ylabel=Widerstand in \(\Omega\),
+    width=0.9\textwidth,
+    height= 11cm,
+    %xmin=61.5,
+    %xmax=94.6,
+    grid=both,
+    tick align=outside,
+    tickpos=left,
+    minor x tick num=3,
+    minor y tick num=4,
+    minor grid style={dotted,thin},
+    scaled ticks=false,
+    xlabel near ticks,
+    ylabel near ticks,
+]
+
+\addplot[red, thick, mark size=0.0pt, samples=20, domain=9.05:9.4]{0.00042583*x+0.049634};
+\addplot[red, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.05:9.4]{0.00091432*x+0.04513286};
+\addplot[red, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.05:9.4]{-0.00006266*x+0.05413479};
+
+\addplot[black, thick, mark size=0.0pt, samples=20, domain=8.94:9.15]{0.019076*x-0.11993};
+\addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=8.94:9.15]{0.020909*x-0.13649};
+\addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=8.94:9.15]{0.017243*x-0.103382};
+\addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.06T.lvm};
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{0.06T}
+\end{figure}
+\end{center}
 
 \begin{center}
 \begin{figure}[h]
@@ -418,6 +452,38 @@ Wie zu sehen ist, ist der Fehler der Plateaugeraden vernachlässigbar gegenüber
 \addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=8.94:9.1]{0.0216378*x-0.1430139};
 \addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=8.94:9.1]{0.0194455*x-0.1232335};
 \addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.10T.lvm};
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{0.10T}
+\end{figure}
+\end{center}
+
+
+
+\begin{center}
+\begin{figure}[h]
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=Temperatur in Kelvin,
+    ylabel=Magnetfeld in Tesla
+    width=0.9\textwidth,
+    height= 11cm,
+    %xmin=61.5,
+    %xmax=94.6,
+    grid=both,
+    tick align=outside,
+    tickpos=left,
+    minor x tick num=3,
+    minor y tick num=4,
+    minor grid style={dotted,thin},
+    scaled ticks=false,
+    xlabel near ticks,
+    ylabel near ticks,
+]
+
+\addplot[red, thick, mark size=0.0pt, samples=20, domain=9.05:9.4]{(1-(x/9.25)*(x/9.25))};
+
+\addplot[black, thick, mark size=0.0pt, samples=20, domain=8.95:9.1]{0.020542*x-0.133124};
 \end{axis}
 \end{tikzpicture}
 \captionof{figure}{0.10T}
