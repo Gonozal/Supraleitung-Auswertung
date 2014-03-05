@@ -165,7 +165,7 @@ Bei der ersten Messung soll die Übergangstemperatur von \ch{YBa2Cu3O7}, einen H
 \end{center}
 
 \section{Übergangstemperatur und Magnetfeldabhängigkeit von Niob}
-Bei der zweiten Messung soll die Sprungtemperatur von Niob in Abhängigkeit eines äußeren Magnetfeldes bestimmt werden. Hierzu wurde nach der Messung an \ch{YBa2Cu3O7} der Kryostat zuerst mit kalten Heliumgas und dann mit flüssigem Helium auf etwa 8 Kelvin abgekühlt. Anschließend wurde mit Hilfe einer Heizwicklung die Temperatur langsam auf etwa 11 Kelvin angehoben. Während diesem Vorgang wurde mit der 4-Pol Messmethode die Spannung, die am Niob abfällt gemessen. Dabei ist anzumerken, dass einer der Messkontakte für die 4-Pol Messung mit Lötzinn verunreinigt ist. Dies führt dazu, dass der am Niob gemessene Widerstand nicht bei erreichen der Sprungtemperatur sehr schnell auf 0 abfällt, sondern einen kleinen Sprung nach unten macht, um dann langsam weiter zu fallen, während teile des Lötzinns bei noch weiter sinkender Temperatur nach und nach ebenfalls supraleitend werden.
+Bei der zweiten Messung soll die Sprungtemperatur von Niob in Abhängigkeit eines äußeren Magnetfeldes bestimmt werden. Hierzu wurde nach der Messung an \ch{YBa2Cu3O7} der Kryostat zuerst mit kalten Heliumgas und dann mit flüssigem Helium auf etwa 8 Kelvin abgekühlt. Anschließend wurde mit Hilfe einer Heizwicklung die Temperatur langsam auf etwa 11 Kelvin angehoben. Während diesem Vorgang wurde mit der 4-Pol Messmethode die Spannung, die am Niob abfällt gemessen. Dabei ist anzumerken, dass einer der Messkontakte für die 4-Pol Messung mit Lötzinn verunreinigt ist. Dies führt dazu, dass der am Niob gemessene Widerstand bei Erreichen der Sprungtemperatur nicht wie erwartet auf 0 abfällt, sondern nur einen kleinen Sprung nach unten macht, um dann langsam weiter zu fallen, während Teile des Lötzinns bei noch weiter sinkender Temperatur nach und nach ebenfalls supraleitend werden.
 
 Anschließend wurde mit dem selben Messverfahren die Messung noch 5 mal mit einem am Niob anliegendem Magnetfeld von $0,02 \ \mathrm{T}$, $0,04 \ \mathrm{T}$, $0,06 \ \mathrm{T}$, $0,08 \ \mathrm{T}$ und $0,10 \ \mathrm{T}$ wiederholt.
 Folgende Messdaten wurden aufgenommen:
@@ -204,7 +204,7 @@ Folgende Messdaten wurden aufgenommen:
 \section{Ermittlung der Übergangstemperatur von \ch{YBa2Cu3O7}}
 Zur Ermittlung der Übergangstemperatur und -Breite des Hochtemperatursupraleiters werden zwei Geraden auf die aufgenommenen Messpunkte gefittet. Eine auf den Plateaubereich über der Sprungtemperatur und eine auf den Sprungbereich selbst.
 
-Der Schnittpunkt zwischen Sprunggerade und Plateaugerade markiert den Beginn des Phasenübegangs und damit \(T_C\), während der Schnittpunkt zwischen Sprunggerade und unterer Plateaugerade das ende des Phasenübergangs markiert.
+Der Schnittpunkt zwischen Sprunggerade und Plateaugerade markiert den Beginn des Phasenübergangs und damit \(T_C\), während der Schnittpunkt zwischen Sprunggerade und unterer Plateaugerade das ende des Phasenübergangs markiert.
 
 Die Geraden werden wie in 2.3.3 beschrieben gefittet. Die Fehlergeraden markieren ein Konfidenzintervall von 95\%.
 \begin{center}
@@ -240,10 +240,20 @@ Die Geraden werden wie in 2.3.3 beschrieben gefittet. Die Fehlergeraden markiere
 Wie zu sehen ist, ist der Fehler der Plateaugeraden vernachlässigbar gegenüber dem Fehler der gefitteten Gerade im abfallenden Bereich. Tatsächlich ist der numerische Fehler für die Plateaugerade um den Faktor 20 geringer. Es ergibt sich durch Berechnung der Schnittpunkte von Plateaugerade und Sprunggerade eine kritische Temperatur $T_C$ von
 
 \begin{equation}
-  T_C = \tol{90,5189}{0,2329}{0,0912}\mathrm{K}
+  T_C = \tol{90,5189}{0,2329}{0,0912} \ \mathrm{K}
 \end{equation}
 
-\section{Ermittlung der Übergangstemperator von Niob}
+\section{Ermittlung der Übergangstemperatur von Niob und Vergleich mit der Theorie}
+
+Die Ermittlung der Sprungtemperatur \(T_C\) für Niob in Abhängigkeit eines äußeren Magnetfeldes \(H_0\) funktioniert genauso wie oben. Sie wird jeweils getrennt für die verschiedenen Werte der Magnetfelder durchgeführt. Die Bestimmung der Übergangsbreite war aufgrund der oben angesprochenen Verfälschung der Messung durch den Lötzinn nicht möglich.
+
+Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flüssigkeiten-Modell verglichen. Diese Beschreibt die Abhängigkeit des kritischen Magnetfeldes eines Supraleiters in Abhängigkeit der Temperatur wie folgt:
+
+\begin{equation}
+  H_C(T) = H_C(0) \cdot \left[ 1- \left(\frac{T}{T_c}\right)^2\right]
+\end{equation}
+
+\(H_C(0)\) beschreibt dabei das kritische Magnetfeld des Supraleiters bei \(T = 0 \ \mathrm{K}\) und \(T_C\) die kritische Temperatur bei einem verschwindenden äußeren Magnetfeld \(B_0=0\ \mathrm{T}\). Die in der Messung eingestellten Magnetfelder werden dann jeweils als das kritische Magnetfeld bei der gemessenen Sprungtemperatur interpretiert.
 
 \begin{center}
 \begin{figure}[h]
