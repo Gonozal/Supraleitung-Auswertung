@@ -140,8 +140,10 @@ die Fehler für A und B berechnen sich aus
 Bei der ersten Messung soll die Übergangstemperatur von \ch{YBa2Cu3O7}, einen Hochtemperatur-Supraleiter, gemessen werden. Zur Ermittlung dieser, wird bei diesem Teil die MIB-Messung verwendet. Die Probe befindet sich hierbei innerhalb der Referenzspule der MIB, welche sich wiederum im gekühlten Krysotaten befindet. Wir messen also indirekt die Magnetisierung der Probe, indem wir die Spannung der MIB gegenüber der Temperatur aufnehmen. Die Kühlung erfolgt in diesem Bereich durch Helium-Gas, die Temperaturmessung erfolgt mit einem PT-100-Thermoelement bei einem Messstrom von $I_{PT} = 10 \ \mathrm{mA}$. Zu erwarten ist ein steiler Anstieg oder Abfall der Spannung beim erreichen der Sprungtemperatur. Folgende Messdaten wurden aufgenommen:
 
 \begin{center}
+\begin{figure}[h]
 \begin{tikzpicture}
 \begin{axis}[
+    title={Messung der Übergangstemperatur von \ch{YBa2Cu3O7}},
     xlabel=Temperatur in Kelvin,
     ylabel=Spannung in Volt,
     width=0.9\textwidth,
@@ -158,6 +160,8 @@ Bei der ersten Messung soll die Übergangstemperatur von \ch{YBa2Cu3O7}, einen H
 \addplot+[mark size=0.5pt] file {Messdaten/soeren\string_kress\string_HTS.lvm};
 \end{axis}
 \end{tikzpicture}
+\captionof{figure}{Beschriebung}
+\end{figure}
 \end{center}
 
 \section{Übergangstemperatur und Magnetfeldabhängigkeit von Niob}
@@ -204,6 +208,7 @@ Der Schnittpunkt zwischen Sprunggerade und Plateaugerade markiert den Beginn des
 
 Die Geraden werden wie in 2.3.3 beschrieben gefittet. Die Fehlergeraden markieren ein Konfidenzintervall von 95\%.
 \begin{center}
+\begin{figure}[h]
 \begin{tikzpicture}
 \begin{axis}[
     xlabel=Temperatur in Kelvin,
@@ -228,6 +233,8 @@ Die Geraden werden wie in 2.3.3 beschrieben gefittet. Die Fehlergeraden markiere
 \addplot[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_HTS.lvm};
 \end{axis}
 \end{tikzpicture}
+\captionof{figure}{Beschriebung}
+\end{figure}
 \end{center}
 
 Wie zu sehen ist, ist der Fehler der Plateaugeraden vernachlässigbar gegenüber dem Fehler der gefitteten Gerade im abfallenden Bereich. Tatsächlich ist der numerische Fehler für die Plateaugerade um den Faktor 20 geringer. Es ergibt sich durch Berechnung der Schnittpunkte von Plateaugerade und Sprunggerade eine kritische Temperatur $T_C$ von
@@ -236,6 +243,150 @@ Wie zu sehen ist, ist der Fehler der Plateaugeraden vernachlässigbar gegenüber
   T_C = \tol{90,5189}{0,2329}{0,0912}\mathrm{K}
 \end{equation}
 
+\section{Ermittlung der Übergangstemperator von Niob}
+
+\begin{center}
+\begin{figure}[h]
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=Temperatur in Kelvin,
+    ylabel=Widerstand in \(\Omega\),
+    width=0.9\textwidth,
+    height= 11cm,
+    %xmin=61.5,
+    %xmax=94.6,
+    grid=both,
+    tick align=outside,
+    tickpos=left,
+    minor x tick num=3,
+    minor y tick num=4,
+    minor grid style={dotted,thin},
+    scaled ticks=false,
+    xlabel near ticks,
+    ylabel near ticks,
+]
+
+\addplot[red, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000204*x+0.051688};
+\addplot[red, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000250*x+0.051225};
+\addplot[red, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000158*x+0.052150};
+
+\addplot[black, thick, mark size=0.0pt, samples=20, domain=9.29:9.44]{0.0187*x-0.1226};
+\addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:9.43]{0.0221*x-0.1545};
+\addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.28:9.45]{0.0153*x-0.0908};
+\addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0T-2.lvm};
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{0.00T}
+\end{figure}
+\end{center}
+
+
+\begin{center}
+\begin{figure}[h]
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=Temperatur in Kelvin,
+    ylabel=Widerstand in \(\Omega\),
+    width=0.9\textwidth,
+    height= 11cm,
+    %xmin=61.5,
+    %xmax=94.6,
+    grid=both,
+    tick align=outside,
+    tickpos=left,
+    minor x tick num=3,
+    minor y tick num=4,
+    minor grid style={dotted,thin},
+    scaled ticks=false,
+    xlabel near ticks,
+    ylabel near ticks,
+]
+
+\addplot[red, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000204*x+0.051688};
+\addplot[red, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000250*x+0.051225};
+\addplot[red, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000158*x+0.052150};
+
+\addplot[black, thick, mark size=0.0pt, samples=20, domain=9.29:9.44]{0.0187*x-0.1226};
+\addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:9.43]{0.0221*x-0.1545};
+\addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.28:9.45]{0.0153*x-0.0908};
+\addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.02T.lvm};
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{0.02T}
+\end{figure}
+\end{center}
+
+
+\begin{center}
+\begin{figure}[h]
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=Temperatur in Kelvin,
+    ylabel=Widerstand in \(\Omega\),
+    width=0.9\textwidth,
+    height= 11cm,
+    %xmin=61.5,
+    %xmax=94.6,
+    grid=both,
+    tick align=outside,
+    tickpos=left,
+    minor x tick num=3,
+    minor y tick num=4,
+    minor grid style={dotted,thin},
+    scaled ticks=false,
+    xlabel near ticks,
+    ylabel near ticks,
+]
+
+\addplot[red, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000204*x+0.051688};
+\addplot[red, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000250*x+0.051225};
+\addplot[red, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000158*x+0.052150};
+
+\addplot[black, thick, mark size=0.0pt, samples=20, domain=9.29:9.44]{0.0187*x-0.1226};
+\addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:9.43]{0.0221*x-0.1545};
+\addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.28:9.45]{0.0153*x-0.0908};
+\addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.04T.lvm};
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{0.04T}
+\end{figure}
+\end{center}
+
+
+\begin{center}
+\begin{figure}[h]
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=Temperatur in Kelvin,
+    ylabel=Widerstand in \(\Omega\),
+    width=0.9\textwidth,
+    height= 11cm,
+    %xmin=61.5,
+    %xmax=94.6,
+    grid=both,
+    tick align=outside,
+    tickpos=left,
+    minor x tick num=3,
+    minor y tick num=4,
+    minor grid style={dotted,thin},
+    scaled ticks=false,
+    xlabel near ticks,
+    ylabel near ticks,
+]
+
+\addplot[red, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000204*x+0.051688};
+\addplot[red, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000250*x+0.051225};
+\addplot[red, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:10.4]{0.000158*x+0.052150};
+
+\addplot[black, thick, mark size=0.0pt, samples=20, domain=9.29:9.44]{0.0187*x-0.1226};
+\addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.3:9.43]{0.0221*x-0.1545};
+\addplot[black, densely dashed, thick, mark size=0.0pt, samples=20, domain=9.28:9.45]{0.0153*x-0.0908};
+\addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.06T.lvm};
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{0.06T}
+\end{figure}
+\end{center}
 \chapter{Fazit}
 
 %ENDE INHALT
