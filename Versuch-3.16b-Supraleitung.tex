@@ -292,7 +292,7 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 
 
 \begin{center}
-\begin{figure}[h]
+\begin{figure}[H]
 \begin{tikzpicture}
 \begin{axis}[
     xlabel=Temperatur in Kelvin,
@@ -468,6 +468,61 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 \end{figure}
 \end{center}
 
+Zusammengefasst erhalten wir folgende Werte als Sprungtemperatur \(T_C\) von Niob in Abhängigkeit eines äußeren Magnetfeldes \(B_0\):
+
+\begin{table}[H]
+	\centering
+		\begin{tabular}{l|l}
+            \(B_0 \) in \( \mathrm{T}\)  & \(T_C \) in \( \mathrm{K} \) \\ \hline \hline
+            0     &  \ \tol{9,4230}{0,0176}{0,0076}\\ \hline
+            0,02  &  \ \tol{9,3780}{0,0120}{0,0110}\\ \hline
+            0,04  &  \ \tol{9,1281}{0,0325}{0,0198}\\ \hline
+            0,06  &  \ \tol{9,0918}{0,0102}{0,0083}\\ \hline
+            0,08  &  \ \tol{9,0943}{0,0199}{0,0136}\\ \hline
+            0,10  &  \ \tol{9,0830}{0,0076}{0,0030}
+            
+		\end{tabular}
+	\caption{Sprungtemperatur in Abh. von einem äußeren Magnetfeld}
+\end{table}
+
+\begin{center}
+\begin{figure}[h]
+\begin{tikzpicture}
+\begin{axis}[
+    xlabel=Temperatur in Kelvin,
+    ylabel=Magnetfeld in Tesla,
+    width=0.9\textwidth,
+    height= 11cm,
+    %xmin=61.5,
+    %xmax=94.6,
+    grid=both,
+    tick align=outside,
+    tickpos=left,
+    minor x tick num=3,
+    minor y tick num=4,
+    minor grid style={dotted,thin},
+    scaled ticks=false,
+    xlabel near ticks,
+    ylabel near ticks,
+]
+
+\addplot+[error bars/.cd,
+x dir=both,x explicit,
+%x dir=both,x fixed=0.05
+] coordinates{
+(9.4230,0)    +-(0.0176,0.0076)
+(9.3780,0.02) +-(0.0120,0.0110)
+(9.1281,0.04) +-(0.0325,0.0198)
+(9.0918,0.06) +-(0.0102,0.0083)
+(9.0943,0.08) +-(0.0199,0.0136)
+(9.0830,0.10) +-(0.0076,0.0030)
+};
+
+\end{axis}
+\end{tikzpicture}
+\captionof{figure}{0.10T}
+\end{figure}
+\end{center}
 
 
 \begin{center}
