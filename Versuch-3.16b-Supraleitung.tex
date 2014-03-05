@@ -326,7 +326,6 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 \end{figure}
 \end{center}
 
-
 \begin{center}
 \begin{figure}[h]
 \begin{tikzpicture}
@@ -432,7 +431,6 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 \end{figure}
 \end{center}
 
-
 \begin{center}
 \begin{figure}[h]
 \begin{tikzpicture}
@@ -524,7 +522,6 @@ x dir=both,x explicit,
 \end{figure}
 \end{center}
 
-
 \begin{center}
 \begin{figure}[h]
 \begin{tikzpicture}
@@ -533,8 +530,8 @@ x dir=both,x explicit,
     ylabel=Magnetfeld in Tesla
     width=0.9\textwidth,
     height= 11cm,
-    %xmin=61.5,
-    %xmax=94.6,
+    xmin=0,
+    xmax=10,
     grid=both,
     tick align=outside,
     tickpos=left,
@@ -546,9 +543,7 @@ x dir=both,x explicit,
     ylabel near ticks,
 ]
 
-\addplot[red, thick, mark size=0.0pt, samples=20, domain=9.05:9.4]{(1-(x/9.25)*(x/9.25))};
-
-\addplot[black, thick, mark size=0.0pt, samples=20, domain=8.95:9.1]{0.020542*x-0.133124};
+\addplot[red, thick, mark size=0.0pt, samples=20, domain=0.0:10.0]{0.4*(1-(x/9.25)*(x/9.25))};
 \end{axis}
 \end{tikzpicture}
 \captionof{figure}{0.10T}
