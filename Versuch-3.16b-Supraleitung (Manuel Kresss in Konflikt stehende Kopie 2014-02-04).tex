@@ -25,15 +25,11 @@
 
 % PDF-Optionen
 \hypersetup{
-  pdftitle={TU Darmstadt \- Physikalisches Praktikum für Fortgeschrittene},
-  pdfauthor={Manuel Kress und Sören Link},
+  pdftitle={TU Darmstadt - Physikalisches Praktikum für Fortgeschrittene},
+  pdfauthor={Manuel Kress und PARTERNAME},
   pdfsubject={Versuch 3.16-B},
   pdfview=FitH,
 }
-% Nummeriere formeln in Subsections einzeln
-\numberwithin{equation}{subsection}
-% Kleines makro zur assymetrischen Fehlerangabe
-\def\tol#1#2#3{\hbox{\rule{0pt}{15pt}${#1}^{+{#2}}_{-{#3}}$}}% 
 
 %BEGINN TITELSEITE
 
@@ -67,10 +63,10 @@
 \chapter{Einleitung}
 In diesem Versuch werden Festkörper bei tiefen Temperaturen untersucht. Speziell wird dabei der Effekt der Supraleitung untersucht und behandelt. Dazu analysieren wir die die Temperaturabhängigkeit des Widerstandes (und somit die Sprungtemperator) von \ch{YBa2Cu3O7} und Niob sowie die Veränderung der Sprungtemperator von Niob in Abhängigkeit eines äußerem Magnetfeldes.
 \chapter{Grundlagen}
-\section{Supraleitung}
+\section{Supraleitung (Geschrieben von Manuel Kress)}
 Viele Metalle und auch andere Festkörper zeigen unterhalb einer bestimmten Temperatur den Effekt, dass ihr elektrischer Widerstand auf Null fällt. Diesen Effekt nennt man \textbf{Supraleitung}. Der Widerstand springt dann beim Unterscheiten der sogenannten \textbf{Sprungtemperatur} entgegen der klassischen Erwartung plötzlich auf unmessbare Werte. In diesem Zustand können supraleitende Medien dauerhaft Ströme über mehrere Jahre ohne Verlust aufrecht erhalten.
 
-\subsection{Temperaturabhängigkeit des Widerstandes}
+\subsection{Temperaturabhängigkeit des Widerstandes (Geschrieben von Manuel Kress)}
 Normalerweise ist es so, dass der spezifische elektrische Widerstand eines Materials oberhalb seiner Sprungtemperatur stark von dessen Temperatur abhängt. Je nach Art und Aufbau des Materials ist diese Abhängigkeit stark unterschiedlich und kann sich z.B. bei Phasensprüngen sogar sprunghaft verändern. Bei Leitern steigt im allgemeinen der spezifische Widerstand \(\rho = \frac{RA}{L}\) mit der Temperatur an und kann in einem begrenzten Temperaturbereich folgendermaßen annähern linear  beschrieben werden:
 
 \[\rho(T) = \rho(T_0) \cdot (1 + \alpha \cdot (T-T_0))\]
@@ -81,160 +77,61 @@ Bei Halbleitern ist der Zusammenhang zwischen Widerstand und Temperatur abhängi
 
 Alle supraleitenden Materialien haben gemeinsam, dass deren elektrischer Widerstand beim unterschreiten der Sprungtemperatur deren elektrischer Widerstand auf Null sinkt und beim überschreiten wieder auf den normalen Wert springt.
 
-\subsection{Eigenschaften von Supraleitern}
+\subsection{Eigenschaften von Supraleitern (Geschrieben von Manuel Kress)}
 Neben der Eigenschaft, dass Supraleiter (bei unterschreiten der Sprungtemperatur) eine perfekte elektrische Leitfähigkeit besitzen, zeigen sie außerdem das Phänomen, ein äußeres Magnetfeld \(H < H_C\) aus ihrem inneren zu verdrängen (Meißner-Ochsenfeld-Effekt, nur bei Supraleitern I. Art). \(H_C\) ist dabei eine kritische magnetische Feldstärke, ab der die Supraleitung zusammenbricht.
 
-\subsection{Arten von Supraleitern}
+\subsection{Arten von Supraleitern (Geschrieben von Sören Link)}
 Supraleiter werden je nach deren verhalten im äußeren Magnetfeld in zwei Gruppen kategorisiert. Supraleiter erster Art besitzen ein kritisches Magnetfeld, $H_C$ bei dessen Überschreitung das Material praktisch sofort seine supraleitenden Eigenschaften verliert. Dagegen gibt es bei Supraleitern zweiter Art zwei kritische Magnetfelder $H_{C1} < H_{C2}$. Nach Überschreitung des ersten Wertes $H_{C1}$ sinkt der auf der Oberfläche induzierter Strom und somit die Magnetisierung des Supraleiters zuerst schnell, danach jedoch zunehmend langsamer ab. Gleichzeitig bilden sich magnetische Flussschläuche durch das Material. Erst nach Überschreitung des zweiten kritischen Wertes $H_{C2}$, welcher deutlich über dem Ersten liegen kann, verschwinden die supraleitenden Eigenschaften des Materials.
 
-\section{Kühlung}
+\section{Kühlung (Geschrieben von Manuel Kress)}
 Die Sprungtemperaturen von allen supraleitenden Materialien liegen sehr weit unter Zimmertemperatur und meist nahe am absoluten Nullpunkt. So hat Quecksilber eine Sprungtemperatur von \(T_C = 4,153 \ \mathrm{K}\) und die des keramischen Hochtemperatursupraleiters \ch{YBa2Cu3O7} liegt bei \(T_C = 93 \ \mathrm{K}\).
 
 Um im Experiment solche Temperaturen zu erreichen, verwendet man spezielle Kühlvorrichtungen. In diesem Versuch wird dazu ein Verdampferkryostat verwendet. Ein Kryostat ist prinzipiell ein Kühlgerät, mit welchem sehr tiefe Temperaturen erreicht und gehalten werden können. Im Verdampferkryostat wird dazu flüssiges Gas verdampft. Im Versuch wird \ch{^4He} verwendet, dessen Siedetemperatur bei \(T = 4,15 \ \mathrm{K}\) liegt, weshalb damit Materialen bis zu dieser Temperatur abgekühlt werden können.
 
 \section{Messverfahren}
-\subsection{Vierpol-Widerstands-Messmethode}
+\subsection{Vierpol-Widerstands-Messmethode (Geschrieben von Sören Link)}
 Die Vierpol-Widerstands-Messmethode wird zur Messung von Widerständen benutzt, die so gering sind, dass der Widerstand der Kabel nicht mehr vernachlässigt werden kann. Hierbei wird direkt am zu messenden Widerstand $R_t$ parallel zur Stromquelle ein hochohmiges Voltmeter angeschlossen, wodurch sowohl am Voltmeter als auch am Widerstand die gleiche Spannung abfallen muss. Durch den sehr hohen Innenwiderstand des Voltmeters (typischerweise im Bereich von $10^6\Omega$ bis $10^9\Omega$) ist der Widerstand in den zum Voltmeter führenden Kablen vernachlässigbar und $R_t$ kann exakt über den Zusammenhang $R=U \cdot I$ bestimmt werden.
-\subsection{Mutual Induction Bridge (\textbf{MIB})}
+
+\subsection{Mutual Induction Bridge (\textbf{MIB}) (Geschrieben von Sören Link)}
 Bei der \textbf{MIB} handelt es sich um 2 Sekundärspulen, welche gegensätzlich gewickelt und in einer Primärspule eingebettet sind. Wird die Primärspule nun an eine Welchselspannungsquelle angeschlossen, werden in den Sekundärströmen entgegengesetzte Ströme induziert welche in der Summe 0 ergeben. Wird nun ein Para- oder Diamagnetischer Stoff in eine der beiden Sekundärspulen gegeben, verändert sich die Induktivität dieser Spule und man erhält bei Addition beider Ströme einen Wert, der von 0 verschieden ist.
 
 Der Vorteil gegenüber eiener Anordnung mit nur einer Sekundärspule ist, dass der resultierende Strom ohne Probe in der Spule genullt wird und so bereits kleine Veränderungen durch die Probe leicht zu erkennen sind. Außerdem werden Störeinflüsse aus der Umwelt wie das Erdmagnetfeld oder Erschütterungen des Versuchsaufbaus weitgehend eliminiert, was den systematischen Fehler der Anordnung verringert.
 
-\subsection{Fitten linearer funktionen an Messdaten}
-Liegen für einen linearen zusammenhang mehr als zwei Messpunkte vor, empfiehlt sich das fitten einer linearen Funktion an alle Messpunkte im zu beachtenden Intervall.
-
-Gesucht ist also eine lineare Funktion der form:
-\begin{equation}
-  f(x) = A + B \cdot x
-\end{equation}
-welche möglichst gut auf alle gemessenen Punkte passt und den gesamtfehler 
-
-\begin{equation}
-  \chi = \sum\limits_{i=1}^N {\left(\frac{y_i-f(x_i)}{\sigma_i}\right)}^2
-\end{equation}
-minimiert
-
-Die Parameter A und B sind dann gegeben durch
-\begin{equation}
-  A = \frac{\sum\limits_{i}\frac{y_i}{\sigma_i^2} \cdot \sum\limits_{i}\frac{x_i^2}{\sigma_i^2} -
-  \sum\limits_{i}\frac{x_i}{\sigma_i^2} \cdot \sum\limits_{i}\frac{x_{i}y_{i}}{\sigma_i^2}}{\Delta}
-\end{equation}
-\begin{equation}
-  B = \frac{\sum\limits_{i}\frac{1}{\sigma_i^2} \cdot \sum\limits_{i}\frac{x_{i}y_{i}}{\sigma_i^2} -
-  \sum\limits_{i}\frac{y_i}{\sigma_i^2} \cdot \sum\limits_{i}\frac{x_i}{\sigma_i^2}}{\Delta}
-\end{equation}
-mit 
-\begin{equation}
-  \Delta = \sum\limits_{i}\frac{1}{\sigma_i^2}\sum{x_i^2}/{\sigma_i^2} - {(\sum\limits_{i}\frac{x_i}{\sigma_i^2})}^2
-\end{equation}
-
-die Fehler für A und B berechnen sich aus
-\begin{equation}
-  \sigma_A^2=\frac{1}{\Delta}\sum\limits_{i}\frac{x_i^2}{\sigma_i^2}
-\end{equation}
-\begin{equation}
-  \sigma_A^2=\frac{1}{\Delta}\sum\limits_{i}\frac{1}{\sigma_i^2}
-\end{equation}
 \chapter{Durchführung}
-\section{Übergangstemperatur von \ch{YBa2Cu3O7}}
-Bei der ersten Messung soll die Übergangstemperatur von \ch{YBa2Cu3O7}, einen Hochtemperatur-Supraleiter, gemessen werden. Zur Ermittlung dieser, wird bei diesem Teil die MIB-Messung verwendet. Die Probe befindet sich hierbei innerhalb der Referenzspule der MIB, welche sich wiederum im gekühlten Krysotaten befindet. Wir messen also indirekt die Magnetisierung der Probe, indem wir die Spannung der MIB gegenüber der Temperatur aufnehmen. Die Kühlung erfolgt in diesem Bereich durch Helium-Gas, die Temperaturmessung erfolgt mit einem PT-100-Thermoelement bei einem Messstrom von $I_{PT} = 10 \ \mathrm{mA}$. Zu erwarten ist ein steiler Anstieg oder Abfall der Spannung beim erreichen der Sprungtemperatur. Folgende Messdaten wurden aufgenommen:
+\section{Übergangstemperatur von \ch{YBa2Cu3O7} (Geschrieben von Manuel Kress)}
+Bei der ersten Messung soll die Übergangstemperatur von \ch{YBa2Cu3O7} ermittelt werden. Zur Ermittlung dieser, wird bei diesem Teil die MIB-Messung verwendet. Die Probe befindet sich hierbei innerhalb der Referenzspule der MIB, welche sich wiederum im gekühlten Krysotaten befindet. Wir messen also indirekt die Magnetisierung der Probe, indem wir die Spannung der MIB gegenüber der Temperatur aufnehmen. Die Kühlung erfolgt in diesem Bereich durch Helium-Gas, die Temperaturmessung erfolgt mit einem PT-100-Thermoelement bei einem Messstrom von \(I_PT = 10 \ \mathrm{mA}\). Zu erwarten ist ein Anstieg (bzw., da wir die negative Spannung gemessen haben, ein Abfall) der Spannung beim erreichen der Sprungtemperatur. Folgende Messdaten wurden aufgenommen:
 
-\begin{center}
+
 \begin{tikzpicture}
 \begin{axis}[
-    xlabel=Temperatur in Kelvin,
-    ylabel=Spannung in Volt,
-    width=0.9\textwidth,
-    height= 11cm,
-    xmin=61.5,
-    xmax=94.6,
-    grid=both,
-    tick align=outside,
-    tickpos=left,
-    minor x tick num=3,
-    minor y tick num=4,
-    minor grid style={dotted,thin}
+    ylabel={$U$ in $V$},
+    xlabel={$T$ in $K$},
 ]
 \addplot+[mark size=0.5pt] file {Messdaten/soeren\string_kress\string_HTS.lvm};
 \end{axis}
 \end{tikzpicture}
-\end{center}
 
-\section{Übergangstemperatur und Magnetfeldabhängigkeit von Niob}
-Bei der zweiten Messung soll die Sprungtemperatur von Niob in Abhängigkeit eines äußeren Magnetfeldes bestimmt werden. Hierzu wurde nach der Messung an \ch{YBa2Cu3O7} der Kryostat zuerst mit kalten Heliumgas und dann mit flüssigem Helium auf etwa 8 Kelvin abgekühlt. Anschließend wurde mit Hilfe einer Heizwicklung die Temperatur langsam auf etwa 11 Kelvin angehoben. Während diesem Vorgang wurde mit der 4-Pol Messmethode die Spannung, die am Niob abfällt gemessen. Dabei ist anzumerken, dass einer der Messkontakte für die 4-Pol Messung mit Lötzinn verunreinigt ist. Dies führt dazu, dass der am Niob gemessene Widerstand nicht bei erreichen der Sprungtemperatur sehr schnell auf 0 abfällt, sondern einen kleinen Sprung nach unten macht, um dann langsam weiter zu fallen, während teile des Lötzinns bei noch weiter sinkender Temperatur nach und nach ebenfalls supraleitend werden.
+\section{Übergangstemeratur und Magnetfeldabhängigkeit von Niob (Geschrieben von Sören Link)}
+TODO: Text einfügen, nur ein Graph Test bisher
 
-Anschließend wurde mit dem selben Messverfahren die Messung noch 5 mal mit einem am Niob anliegendem Magnetfeld von $0,02 \ \mathrm{T}$, $0,04 \ \mathrm{T}$, $0,06 \ \mathrm{T}$, $0,08 \ \mathrm{T}$ und $0,10 \ \mathrm{T}$ wiederholt.
-Folgende Messdaten wurden aufgenommen:
-\begin{center}
 \begin{tikzpicture}
 \begin{axis}[
-    xlabel=Temperatur in Kelvin,
-    ylabel=Widerstand in \(\Omega\),
-    width=0.9\textwidth,
-    height= 11cm,
-    %xmin=61.5,
-    %xmax=94.6,
-    grid=both,
-    tick align=outside,
-    tickpos=left,
-    minor x tick num=3,
-    minor y tick num=4,
-    minor grid style={dotted,thin},
-    scaled ticks=false,
-    xlabel near ticks,
-    ylabel near ticks,
+    ylabel={$U$ in $V$},
+    xlabel={$T$ in $K$},
+    legend style={at={(0.5,-0.25)},
+    anchor=north,legend columns=-1}
 ]
-
-\addplot+[mark size=0.75pt, smooth] file {Messdaten/soeren\string_kress\string_NTS\string_0T-2.lvm};
-\addplot+[mark size=0.75pt, smooth] file {Messdaten/soeren\string_kress\string_NTS\string_0.02T.lvm};
-\addplot+[mark size=0.75pt, smooth] file {Messdaten/soeren\string_kress\string_NTS\string_0.04T.lvm};
-\addplot+[mark size=0.5pt, smooth] file {Messdaten/soeren\string_kress\string_NTS\string_0.06T.lvm};
-\addplot+[mark size=0.5pt, smooth] file {Messdaten/soeren\string_kress\string_NTS\string_0.08T.lvm};
-\addplot+[mark size=0.5pt, smooth] file {Messdaten/soeren\string_kress\string_NTS\string_0.10T.lvm};
-\legend {$B=0\ldotp00T$,$B=0\ldotp02T$,$B=0\ldotp04T$,$B=0\ldotp06T$,$B=0\ldotp08T$,$B=0\ldotp10T$}
+\addplot+[mark size=0.75pt] file {Messdaten/soeren\string_kress\string_NTS\string_0T-2.lvm};
+\addplot+[mark size=0.75pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.02T.lvm};
+\addplot+[mark size=0.75pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.04T.lvm};
+\addplot+[mark size=0.5pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.06T.lvm};
+\addplot+[mark size=0.5pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.08T.lvm};
+\addplot+[mark size=0.5pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.10T.lvm};
+\legend {$H=0.00T$,$H=0.02T$,$H=0.04T$,$H=0.06T$,$H=0.08T$,$H=0.10T$}
 \end{axis}
 \end{tikzpicture}
-\end{center}
 
 \chapter{Auswertung}
-\section{Ermittlung der Übergangstemperatur von \ch{YBa2Cu3O7}}
-Zur Ermittlung der Übergangstemperatur und -Breite des Hochtemperatursupraleiters werden zwei Geraden auf die aufgenommenen Messpunkte gefittet. Eine auf den Plateaubereich über der Sprungtemperatur und eine auf den Sprungbereich selbst.
-
-Der Schnittpunkt zwischen Sprunggerade und Plateaugerade markiert den Beginn des Phasenübegangs und damit \(T_C\), während der Schnittpunkt zwischen Sprunggerade und unterer Plateaugerade das ende des Phasenübergangs markiert.
-
-Die Geraden werden wie in 2.3.3 beschrieben gefittet. Die Fehlergeraden markieren ein Konfidenzintervall von 95\%.
-\begin{center}
-\begin{tikzpicture}
-\begin{axis}[
-    xlabel=Temperatur in Kelvin,
-    ylabel=Spannung in Volt,
-    width=0.9\textwidth,
-    height= 11cm,
-    xmin=82,
-    xmax=94.6,
-    grid=both,
-    tick align=outside,
-    tickpos=left,
-    minor x tick num=3,
-    minor y tick num=4,
-    minor grid style={dotted,thin}
-]
-\addplot[red, thick, mark size=0.0pt, domain=87:94.6, samples=20]{0.0039*x+4.2320};
-\addplot[red, densely dashed, thick, mark size=0.0pt, domain=87:94.6, samples=20]{0.0048*x+4.1428};
-\addplot[red, densely dashed, thick, mark size=0.0pt, domain=87:94.6, samples=20]{0.0031*x+4.3212};
-\addplot[black, thick, mark size=0.0pt, domain=89:90.75, samples=20]{3.2153*x-286.4604};
-\addplot[black, densely dashed, thick, mark size=0.0pt, domain=89.2:90.55, samples=20]{3.8725*x-345.5966};
-\addplot[black, densely dashed, thick, mark size=0.0pt, domain=88.8:91, samples=20]{2.5580*x-227.3242};
-\addplot[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_HTS.lvm};
-\end{axis}
-\end{tikzpicture}
-\end{center}
-
-Wie zu sehen ist, ist der Fehler der Plateaugeraden vernachlässigbar gegenüber dem Fehler der gefitteten Gerade im abfallenden Bereich. Tatsächlich ist der numerische Fehler für die Plateaugerade um den Faktor 20 geringer. Es ergibt sich durch Berechnung der Schnittpunkte von Plateaugerade und Sprunggerade eine kritische Temperatur $T_C$ von
-
-\begin{equation}
-  T_C = \tol{90,5189}{0,2329}{0,0912}\mathrm{K}
-\end{equation}
 
 \chapter{Fazit}
 
@@ -254,4 +151,3 @@ Wie zu sehen ist, ist der Fehler der Plateaugeraden vernachlässigbar gegenüber
 \listoffigures
 
 \end{document}
-
