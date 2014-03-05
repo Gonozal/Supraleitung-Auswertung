@@ -23,6 +23,9 @@
 % Deutsche Zahlen (entfernt z.B. das Leerzeichen nach einem Dezimal-Komma)
 \usepackage{ziffer} 
 
+\usepackage[verbose]{placeins}
+
+
 % PDF-Optionen
 \hypersetup{
   pdftitle={TU Darmstadt \- Physikalisches Praktikum für Fortgeschrittene},
@@ -160,7 +163,7 @@ Bei der ersten Messung soll die Übergangstemperatur von \ch{YBa2Cu3O7}, einen H
 \addplot+[mark size=0.5pt] file {Messdaten/soeren\string_kress\string_HTS.lvm};
 \end{axis}
 \end{tikzpicture}
-\captionof{figure}{Beschriebung}
+\captionof{figure}{Magnetisierung der Probe in Abhängikeit der Temperatur.}
 \end{figure}
 \end{center}
 
@@ -170,6 +173,7 @@ Bei der zweiten Messung soll die Sprungtemperatur von Niob in Abhängigkeit eine
 Anschließend wurde mit dem selben Messverfahren die Messung noch 5 mal mit einem am Niob anliegendem Magnetfeld von $0,02 \ \mathrm{T}$, $0,04 \ \mathrm{T}$, $0,06 \ \mathrm{T}$, $0,08 \ \mathrm{T}$ und $0,10 \ \mathrm{T}$ wiederholt.
 Folgende Messdaten wurden aufgenommen:
 \begin{center}
+\begin{figure}[h]
 \begin{tikzpicture}
 \begin{axis}[
     xlabel=Temperatur in Kelvin,
@@ -198,7 +202,11 @@ Folgende Messdaten wurden aufgenommen:
 \legend {$B=0\ldotp00T$,$B=0\ldotp02T$,$B=0\ldotp04T$,$B=0\ldotp06T$,$B=0\ldotp08T$,$B=0\ldotp10T$}
 \end{axis}
 \end{tikzpicture}
+\captionof{figure}{Verlauf des Widerstandes des Niob-Elements in Abhängigkeit von der Temperator und äußeren Magnetfeldern.}
+\end{figure}
 \end{center}
+
+Bemerkenswert ist, dass die Verläufe für äußere Magnetfelder von $0,06 \ \mathrm{T}$, $0,08 \ \mathrm{T}$, $0,10 \ \mathrm{T}$ sich gegenseitig überlappen. Dies liegt vermutlich an einem Fehler in der Versuchsdurchführung.
 
 \chapter{Auswertung}
 \section{Ermittlung der Übergangstemperatur von \ch{YBa2Cu3O7}}
@@ -255,14 +263,14 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 
 \(H_C(0)\) beschreibt dabei das kritische Magnetfeld des Supraleiters bei \(T = 0 \ \mathrm{K}\) und \(T_C\) die kritische Temperatur bei einem verschwindenden äußeren Magnetfeld \(B_0=0\ \mathrm{T}\). Die in der Messung eingestellten Magnetfelder werden dann jeweils als das kritische Magnetfeld bei der gemessenen Sprungtemperatur interpretiert.
 
-\begin{center}
 \begin{figure}[h]
+\begin{center}
 \begin{tikzpicture}
 \begin{axis}[
     xlabel=Temperatur in Kelvin,
     ylabel=Widerstand in \(\Omega\),
     width=0.9\textwidth,
-    height= 11cm,
+    height= 10cm,
     %xmin=61.5,
     %xmax=94.6,
     grid=both,
@@ -286,19 +294,17 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 \addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0T-2.lvm};
 \end{axis}
 \end{tikzpicture}
-\captionof{figure}{0.00T}
-\end{figure}
+\captionof{figure}{Verlauf des Widerstandes der Niob-Probe in abh. der Temperatur ohne externes Magnetfeld.}
 \end{center}
-
-
-\begin{center}
+\end{figure}
 \begin{figure}[H]
+\begin{center}
 \begin{tikzpicture}
 \begin{axis}[
     xlabel=Temperatur in Kelvin,
     ylabel=Widerstand in \(\Omega\),
     width=0.9\textwidth,
-    height= 11cm,
+    height= 10cm,
     %xmin=61.5,
     %xmax=94.6,
     grid=both,
@@ -322,18 +328,17 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 \addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.02T.lvm};
 \end{axis}
 \end{tikzpicture}
-\captionof{figure}{0.02T}
-\end{figure}
+\captionof{figure}{Verlauf des Widerstandes der Niob-Probe in abh. der Temperatur bei einem externen Magnetfeld von B=0.04T.}
 \end{center}
-
-\begin{center}
+\end{figure}
 \begin{figure}[h]
+\begin{center}
 \begin{tikzpicture}
 \begin{axis}[
     xlabel=Temperatur in Kelvin,
     ylabel=Widerstand in \(\Omega\),
     width=0.9\textwidth,
-    height= 11cm,
+    height= 10cm,
     %xmin=61.5,
     %xmax=94.6,
     grid=both,
@@ -357,18 +362,17 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 \addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.04T.lvm};
 \end{axis}
 \end{tikzpicture}
-\captionof{figure}{0.04T}
-\end{figure}
+\captionof{figure}{Verlauf des Widerstandes der Niob-Probe in abh. der Temperatur bei einem externen Magnetfeld von B=0.04T.}
 \end{center}
-
-\begin{center}
+\end{figure}
 \begin{figure}[h]
+\begin{center}
 \begin{tikzpicture}
 \begin{axis}[
     xlabel=Temperatur in Kelvin,
     ylabel=Widerstand in \(\Omega\),
     width=0.9\textwidth,
-    height= 11cm,
+    height= 10cm,
     %xmin=61.5,
     %xmax=94.6,
     grid=both,
@@ -392,18 +396,17 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 \addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.06T.lvm};
 \end{axis}
 \end{tikzpicture}
-\captionof{figure}{0.06T}
-\end{figure}
+\captionof{figure}{Verlauf des Widerstandes der Niob-Probe in abh. der Temperatur bei einem externen Magnetfeld von B=0.06T.}
 \end{center}
-
-\begin{center}
+\end{figure}
 \begin{figure}[h]
+\begin{center}
 \begin{tikzpicture}
 \begin{axis}[
     xlabel=Temperatur in Kelvin,
     ylabel=Widerstand in \(\Omega\),
     width=0.9\textwidth,
-    height= 11cm,
+    height= 10cm,
     %xmin=61.5,
     %xmax=94.6,
     grid=both,
@@ -427,18 +430,17 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 \addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.08T.lvm};
 \end{axis}
 \end{tikzpicture}
-\captionof{figure}{0.08T}
-\end{figure}
+\captionof{figure}{Verlauf des Widerstandes der Niob-Probe in abh. der Temperatur bei einem externen Magnetfeld von B=0.08T.}
 \end{center}
-
-\begin{center}
+\end{figure}
 \begin{figure}[h]
+\begin{center}
 \begin{tikzpicture}
 \begin{axis}[
     xlabel=Temperatur in Kelvin,
     ylabel=Widerstand in \(\Omega\),
     width=0.9\textwidth,
-    height= 11cm,
+    height= 10cm,
     %xmin=61.5,
     %xmax=94.6,
     grid=both,
@@ -462,13 +464,16 @@ Als weiteren Schritt werden die ermittelten Sprungtemperaturen mit dem Zwei-Flü
 \addplot+[mark=x, only marks, blue, thin, mark size=2pt] file {Messdaten/soeren\string_kress\string_NTS\string_0.10T.lvm};
 \end{axis}
 \end{tikzpicture}
-\captionof{figure}{0.10T}
-\end{figure}
+\captionof{figure}{Verlauf des Widerstandes der Niob-Probe in abh. der Temperatur bei einem externen Magnetfeld von B=0.10T.}
 \end{center}
+\end{figure}
+\FloatBarrier
 
+\begin{minipage}[h]{\textwidth}
 Zusammengefasst erhalten wir folgende Werte als Sprungtemperatur \(T_C\) von Niob in Abhängigkeit eines äußeren Magnetfeldes \(B_0\):
+\end{minipage}
 
-\begin{table}[H]
+\begin{table}[h]
 	\centering
 		\begin{tabular}{l|l}
             \(B_0 \) in \( \mathrm{T}\)  & \(T_C \) in \( \mathrm{K} \) \\ \hline \hline
@@ -478,56 +483,18 @@ Zusammengefasst erhalten wir folgende Werte als Sprungtemperatur \(T_C\) von Nio
             0,06  &  \ \tol{9,0918}{0,0102}{0,0083}\\ \hline
             0,08  &  \ \tol{9,0943}{0,0199}{0,0136}\\ \hline
             0,10  &  \ \tol{9,0830}{0,0076}{0,0030}
-            
 		\end{tabular}
 	\caption{Sprungtemperatur in Abh. von einem äußeren Magnetfeld}
 \end{table}
 
-\begin{center}
+\FloatBarrier
+
 \begin{figure}[h]
+\begin{center}
 \begin{tikzpicture}
 \begin{axis}[
     xlabel=Temperatur in Kelvin,
     ylabel=Magnetfeld in Tesla,
-    width=0.9\textwidth,
-    height= 11cm,
-    %xmin=61.5,
-    %xmax=94.6,
-    grid=both,
-    tick align=outside,
-    tickpos=left,
-    minor x tick num=3,
-    minor y tick num=4,
-    minor grid style={dotted,thin},
-    scaled ticks=false,
-    xlabel near ticks,
-    ylabel near ticks,
-]
-
-\addplot+[error bars/.cd,
-x dir=both,x explicit,
-%x dir=both,x fixed=0.05
-] coordinates{
-(9.4230,0)    +-(0.0176,0.0076)
-(9.3780,0.02) +-(0.0120,0.0110)
-(9.1281,0.04) +-(0.0325,0.0198)
-(9.0918,0.06) +-(0.0102,0.0083)
-(9.0943,0.08) +-(0.0199,0.0136)
-(9.0830,0.10) +-(0.0076,0.0030)
-};
-
-\end{axis}
-\end{tikzpicture}
-\captionof{figure}{0.10T}
-\end{figure}
-\end{center}
-
-\begin{center}
-\begin{figure}[h]
-\begin{tikzpicture}
-\begin{axis}[
-    xlabel=Temperatur in Kelvin,
-    ylabel=Magnetfeld in Tesla
     width=0.9\textwidth,
     height= 11cm,
     xmin=0,
@@ -543,12 +510,23 @@ x dir=both,x explicit,
     ylabel near ticks,
 ]
 
-\addplot[red, thick, mark size=0.0pt, samples=20, domain=0.0:10.0]{0.4*(1-(x/9.25)*(x/9.25))};
+\addplot[red, thick, mark size=0.0pt, samples=20, domain=0:10]{0.41*(1-(x/9.25)*(x/9.25))};
+\addplot+[blue, only marks, error bars/.cd,
+  x dir=both,x explicit,
+  %x dir=both,x fixed=0.05
+  ] coordinates{
+  (9.4230,0)    +-(0.0176,0.0076)
+  (9.3780,0.02) +-(0.0120,0.0110)
+  (9.1281,0.04) +-(0.0325,0.0198)
+  (9.0918,0.06) +-(0.0102,0.0083)
+  (9.0943,0.08) +-(0.0199,0.0136)
+  (9.0830,0.10) +-(0.0076,0.0030)
+};
 \end{axis}
 \end{tikzpicture}
-\captionof{figure}{0.10T}
-\end{figure}
+\captionof{figure}{Gemessene Werte für das kritische Magnetfeld und theoretischer Verlauf. Die Fehlerbalken der gemessenen Werte sind zu klein um dargestellt zu werden.}
 \end{center}
+\end{figure}
 \chapter{Fazit}
 
 %ENDE INHALT
